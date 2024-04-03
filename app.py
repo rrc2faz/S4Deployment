@@ -20,6 +20,7 @@ df_Directors = df[df.Director.isin(list)]
 dbc_css = "https://cdn.jsdelivr.net/gh/AnnMarieW/dash-bootstrap-templates/dbc.min.css"
 app = Dash(__name__, external_stylesheets=[dbc.themes.VAPOR, dbc_css]) # initialize the app
 #app = dash.Dash(external_stylesheets=[dbc.themes.CYBORG])
+server = app.server
 
 # Create min and max release year for later
 min_date = df_Directors['Release Year'].min()  # get the minimum value of year in the dataset
